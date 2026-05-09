@@ -1,38 +1,176 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f172a;
+  color: #f1f5f9;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: #e2e8f0;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 14px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.tool-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.tool-row input, .tool-row select {
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 120px;
+}
+
+.add-btn {
+  background: transparent;
+  border: 1px dashed #6366f1;
+  color: #6366f1;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.add-btn:hover {
+  background: #6366f120;
+}
+
+.remove-btn {
+  background: #ef444420;
+  border: none;
+  color: #ef4444;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #4f46e5;
+}
+
+.summary-cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.summary-card {
+  flex: 1;
+  min-width: 150px;
+  padding: 20px;
+  border-radius: 12px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.summary-card h3 {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  opacity: 0.8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.summary-card p {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.summary-card.red { background: #ef444420; border: 1px solid #ef4444; }
+.summary-card.orange { background: #f9731620; border: 1px solid #f97316; }
+.summary-card.green { background: #22c55e20; border: 1px solid #22c55e; }
+
+.result-row {
+  border-bottom: 1px solid #334155;
+  padding: 16px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.result-row:last-child { border-bottom: none; }
+
+.tool-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tool-cost {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
 }
+
+.suggestion {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.suggestion.warning { background: #f9731620; color: #fb923c; }
+.suggestion.ok { background: #22c55e20; color: #4ade80; }
